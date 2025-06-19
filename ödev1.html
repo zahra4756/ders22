@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        function sortByBirth(arr) {
+            return arr.sort((a, b) => {
+                let yearA = parseInt(a.split(',')[1].trim());
+                let yearB = parseInt(b.split(',')[1].trim());
+                return yearA - yearB;
+            });
+        }
+
+        let people = ['Ali, 2002', 'Zəhra, 1999', 'Məryəm, 2005'];
+        let sorted = sortByBirth(people);
+        
+        console.log(sorted);
+    </script>
+</body>
+</html>
